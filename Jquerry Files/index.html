@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Jquerry Elements</title>
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="design.css">
+
+	<!-- JS Files -->
+	<script type="text/javascript" src="js/particles.js"></script>
+	<script type="text/javascript" src="js/particles.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/popper.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="heading animated fadeInLeft"><h3>All the jquerry Elements</h3></div>
+<section class="first-part">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="first-example animated flash">
+            <h3 style="font-family: Brush Script MT, cursive;">Click & dissapear</h3>
+            <script>
+            $(document).ready(function(){
+                $("p").click(function(){
+                    $(this).hide();
+                });
+            });
+            </script>
+            <p>If you click on me, I will disappear.</p>
+            <p>Click me away!</p>
+            <p>Click me too!</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="second-example animated pulse">
+           <h3 style="font-family: Brush Script MT, cursive;">Show & Hide</h3>
+            <script>
+            $(document).ready(function(){
+                $("#hide").click(function(){
+                      $(".second-example p").hide(100);
+                });
+                $("#show").click(function(){
+                    $(".second-example p").show(100);
+                });
+            });
+            </script>
+          
+            <p>If you click on the "Hide" button, I will disappear.</p>
+
+            <button id="hide">Hide</button>
+            <button id="show">Show</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="third-example animated wobble">
+           <h3 style="font-family: Brush Script MT, cursive;">Toggle button</h3>
+            <script>
+             $(document).ready(function(){
+                $(".third-example button").click(function(){
+                    $(".third-example p").toggle();
+                });
+            });
+            </script>
+          
+            <button>Toggle between hiding and showing the paragraphs</button>
+
+                <p>This is a paragraph with little content.</p>
+                <p>This is another small paragraph.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="second-part">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="fourth-example animated shake">
+           <h3 style="font-family: Brush Script MT, cursive;">Click to fade in Boxes</h3>
+           <script>
+            $(document).ready(function(){
+                $(".fourth-example button").click(function(){
+                    $("#div1").fadeIn();
+                    $("#div2").fadeIn("slow");
+                    $("#div3").fadeIn(3000);
+                });
+            });
+            </script>
+              <p>Demonstrate fadeIn() with different parameters.</p>
+
+            <button>Click to fade in boxes</button><br><br>
+
+            <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+            <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+            <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+        </div>
+      </div>
+       <div class="col-md-4">
+        <div class="fifth-example animated swing">
+           <h3 style="font-family: Brush Script MT, cursive;">Click to fade in or Out Boxes</h3>
+           <script>
+            $(document).ready(function(){
+                $(".fifth-example button").click(function(){
+                    $("#div4").fadeToggle();
+                    $("#div5").fadeToggle("slow");
+                    $("#div6").fadeToggle(3000);
+                });
+            });
+            </script>
+             <p>Demonstrate fadeToggle() with different speed parameters.</p>
+
+              <button>Click to fade in/out boxes</button><br><br>
+
+              <div id="div4" style="width:80px;height:80px;background-color:red;"></div>
+              <br>
+              <div id="div5" style="width:80px;height:80px;background-color:green;"></div>
+              <br>
+              <div id="div6" style="width:80px;height:80px;background-color:blue;"></div>
+        </div>
+      </div>
+       <div class="col-md-4">
+        <div class="sixth-example animated bounceIn">
+           <h3 style="font-family: Brush Script MT, cursive;">Click to slide the panel down or up</h3>
+         <script> 
+            $(document).ready(function(){
+                $("#flip").click(function(){
+                    $("#panel").slideToggle("slow");
+                });
+            });
+            </script>
+               <div id="flip">Click to slide the panel down or up</div>
+               <div id="panel">Hello world!</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section id="third-part">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="seventh-example animated bounceInDown">
+           <h3 style="font-family: Brush Script MT, cursive;">Click the button multiple times to toggle the animation.</h3>
+            <script> 
+                $(document).ready(function(){
+                    $(".seventh-example button").click(function(){
+                        $(".seventh-example .div7").animate({
+                            height: 'toggle'
+                        });
+                    });
+                });
+            </script> 
+          <p>Click the button multiple times to toggle the animation.</p>
+
+          <button>Start Animation</button>
+
+          <p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+
+          <div class="div7">ok i understand</div>
+
+        </div>
+      </div>
+       <div class="col-md-4">
+        <div class="eight-example animated bounceInLeft">
+           <h3 style="font-family: Brush Script MT, cursive;">Stop Sliders</h3>
+           <script>
+                $(document).ready(function(){
+                  $("#flip1").click(function(){
+                      $("#panel1").slideDown(2000);
+                  });
+                  $("#stop").click(function(){
+                      $("#panel1").stop();
+                  });
+              });
+            </script>
+             <button id="stop">Stop sliding</button>
+
+                <div id="flip1">Click to slide down panel</div>
+                <div id="panel1">tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber temuru</div>
+            
+        </div>
+      </div>
+       <div class="col-md-4">
+        <div class="ninth-example animated bounceInUp">
+           <h3 style="font-family: Brush Script MT, cursive;">Paragraph with alert options</h3>
+         <script> 
+              $(document).ready(function(){
+                  $(".ninth-example button").click(function(){
+                      $(".ninth-example p").hide("slow", function(){
+                          alert("The paragraph is now hidden");
+                      });
+                  });
+              });
+            </script>
+          <button>Hide</button>
+
+          <p>tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming u.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="fourth-part">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="tenth-example animated flipInX">
+           <h3 style="font-family: Brush Script MT, cursive;">vanishers</h3>
+            <script>
+            $(document).ready(function(){
+                $(".tenth-example button").click(function(){
+                    $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+                });
+            });
+            </script>
+             <p id="p1">iure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore </p>
+
+              <button>Click me</button>
+
+
+        </div>
+      </div>
+       <div class="col-md-4">
+        <div class="eleventh-example animated flipInY">
+           <h3 style="font-family: Brush Script MT, cursive;">Show what is in the alert!!!!!!</h3>
+             <script>
+              $(document).ready(function(){
+                  $(".eleventh-example #btn1").click(function(){
+                      alert("Text: " + $(".eleventh-example #test").text());
+                  });
+                  $(".eleventh-example #btn2").click(function(){
+                      alert("HTML: " + $(".eleventh-example #test").html());
+                  });
+              });
+              </script>
+             
+              <p id="test">This is some <b>bold</b> text in a paragraph.</p>
+
+              <button id="btn1">Show Text</button>
+              <button id="btn2">Show HTML</button>
+            
+        </div>
+      </div>
+       <div class="col-md-4">
+        <div class="twelve-example animated bounceInDown">
+           <h3 style="font-family: Brush Script MT, cursive;">Get method</h3>
+                        <script>
+                $(document).ready(function(){
+                    $(".twelve-example button").click(function(){
+                        alert("Value: " + $(".twelve-example #test").val());
+                    });
+                });
+                </script>
+
+          
+                <p>Name: <input type="text" id="test" value="Mickey Mouse"></p>
+
+                <button>Show Value</button> 
+           </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="fifth-part">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="thirteenth-example animated lightSpeedIn">
+           <h3 style="font-family: Brush Script MT, cursive;">vanishers</h3>
+             <script>
+                $(document).ready(function(){
+                    $(".thirteenth-example #btn1").click(function(){
+                        $(".thirteenth-example #test1").text("Hello world!");
+                    });
+                    $(".thirteenth-example #btn2").click(function(){
+                        $(".thirteenth-example #test2").html("<b>Hello world!</b>");
+                    });
+                    $("#btn3").click(function(){
+                        $(".thirteenth-example #test3").val("Dolly Duck");
+                    });
+                });
+                </script>
+           <p id="test1">This is a paragraph.</p>
+              <p id="test2">This is another paragraph.</p>
+
+              <p>Input field: <input type="text" id="test3" value="Mickey Mouse"></p>
+
+              <button id="btn1">Set Text</button>
+              <button id="btn2">Set HTML</button>
+              <button id="btn3">Set Value</button>
+
+        </div>
+      </div>
+       <div class="col-md-4">
+        <div class="fourteenth-example animated flipInX">
+           <h3 style="font-family: Brush Script MT, cursive;">Text Appending</h3>
+              <script>
+              function appendText() {
+                  var txt1 = "<p>Text.</p>";              // Create text with HTML
+                  var txt2 = $("<p></p>").text("Text.");  // Create text with jQuery
+                  var txt3 = document.createElement("p");
+                  txt3.innerHTML = "Text.";               // Create text with DOM
+                  $("body").append(txt1, txt2, txt3);     // Append new elements
+              }
+              </script>
+                  <p>This is a paragraph.</p>
+                  <div class="storage"><button onclick="appendText()">Append text</button></div>
+                              
+        </div>
+      </div>
+       <div class="col-md-4">
+        <div class="fifteen-example animated bounceInDown">
+           <h3 style="font-family: Brush Script MT, cursive;">Remove Elements</h3>
+                          <script>
+                              $(document).ready(function(){
+                                  $("button").click(function(){
+                                      $("p").remove(".test, .demo");
+                                  });
+                              });
+                              </script>
+
+                              
+                              <p>This is a paragraph.</p>
+                              <p class="test">This is p element with class="test".</p>
+                              <p class="test">This is p element with class="test".</p>
+                              <p class="demo">This is p element with class="demo".</p>
+
+                              <button>Remove all p elements with class="test" and class="demo"</button>
+           </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="sixth-part">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="sixteenth-example animated jackInTheBox">
+           <h3 style="font-family: Brush Script MT, cursive;">Color changes</h3>
+               <script>
+              $(document).ready(function(){
+                  $(".sixteenth-example button").click(function(){
+                      $(".sixteenth-example p").css({"background-color": "yellow", "font-size": "200%"});
+                  });
+              });
+              </script>
+                 <h2>This is a heading</h2>
+
+                <p style="background-color:#ff0000">This is a paragraph.</p>
+                <p style="background-color:#00ff00">This is a paragraph.</p>
+                <p style="background-color:#0000ff">This is a paragraph.</p>
+
+                <p>This is a paragraph.</p>
+
+                <button>Set multiple styles for p</button>
+        </div>
+      </div>
+       <div class="col-md-4">
+        <div class="seventeenth-example animated flipInX">
+           <h3 style="font-family: Brush Script MT, cursive;">To know the Dimensions</h3>
+              <script>
+               $(document).ready(function(){
+                    $(".seventeenth-example button").click(function(){
+                        var txt = "";
+                        txt += "Document width/height: " + $(document).width();
+                        txt += "x" + $(document).height() + "\n";
+                        txt += "Window width/height: " + $(window).width();
+                        txt += "x" + $(window).height();
+                        alert(txt);
+                    });
+                });
+              </script>
+                <button>Display dimensions of document and window</button>
+                              
+        </div>
+      </div>
+       <div class="col-md-4">
+        <div class="fifteen-example animated rollIn">
+           <h3 style="font-family: Brush Script MT, cursive;">Grand Parents Theory</h3>
+                       <script>
+                            $(document).ready(function(){
+                                $("span").parentsUntil(".fifteen-example .some").css({"color": "red", "border": "2px solid red"});
+                            });
+                            </script>
+
+                <div class="bodi">  (great-great-grandparent)        
+               <div class ="some"style="width:200px;">div (great-grandparent)
+                      <ul>ul (grandparent)  
+                        <li>li (direct parent)
+                          <span>span</span>
+                        </li>
+                      </ul>   
+                    </div>
+                  </div>
+                     </div>
+                 </div>
+            </div>
+       </div>
+  </section>
+</body>
+</html>
